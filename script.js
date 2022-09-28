@@ -283,7 +283,7 @@ console.log(bigger.calcAge());
 console.log(bigger.getSummary());
 */
 // challege methods
-const mark = {
+/*const mark = {
     firstName:'Mark',
     lastName: 'Miller',
     height: 1.69,
@@ -310,12 +310,99 @@ if (k > m) {
 } else {
     console.log(`${john.firstName}'s BMI (${m}) is higher than ${mark.firstName}'s BMI(${k})`)
 }
-
-
-/*console.log(mark.calcBMIMark());
-console.log(john.calcBMIJohn());
-console.log(chekerBMI.summary());
 */
+// loops for loop
+for (let rep =1 ; rep <= 10; rep++) {
+    console.log(`lifthing weights repetition ${rep}`);
+}
+
+// application of loops in array
+const jonas = [
+    'Jonas',
+    'Schmedtman',
+    2037 - 1991,
+    'teacher',
+    ['Micheal', 'Peter', 'Steven'],
+    true,
+];
+const types = [];
+for (i = 0; i < jonas.length ; i++) {
+    // reading from an array
+    console.log(jonas[i], typeof jonas[i]);
+    // filling types array
+    //types[i] =  typeof jonas[i];
+    types.push( typeof jonas[i]);
+    
+}
+console.log(types);
+ const years = [1991, 2007, 1969, 2020];
+ const ages = [];
+ for(let i = 0; i < years.length; i++) {
+    2037 - years[i];
+    ages.push(2037 - years[i]);
+ 
+ }
+console.log(ages);
+// continue and break
+console.log('-- ONLY STRINGS --');
+for(let i =0 ; i < jonas.length; i++) {
+    if(typeof jonas[i] !== 'string') continue;
+    console.log(jonas[i], typeof jonas[i]);
+}
+console.log('-- BREAK WITH NUMBER --');
+for(let i = 0; i < jonas.length; i++) {
+    if(typeof jonas[i] === "number") break;
+    console.log(jonas[i], typeof jonas[i]);
+}
+
+let rep = 1;
+while(rep <= 10) {
+    //console.log(`WHILE: Lifting weights repetition ${rep}`);
+    rep++;
+}
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+//console.log(dice);
+while(dice !== 6) {
+    console.log(`you have not rolled ${dice}`);
+    dice = Math.trunc(Math.random() * 6) + 1;
+    if (dice === 6) { console.log('the loop is done');}
+}
+function calcTip (bill) {
+    const tip1 = (15/100 * bill);
+    const tip2 =(20/100 * bill);
+    if ( bill >= 50 && bill <= 300) {
+        return tip1;
+
+    } else {
+        return tip2;
+    }
+}
+
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+const tips = [];
+const total = [];
+
+for(i = 0; i < bills.length; i++) {
+    const tip = calcTip(bills[i]);
+    tips.push(tip);
+    total.push(bills[i] + tip);
+    
+}
+console.log(bills, tips, total);
+const calcAve = function(arr) {
+    let sum =0;
+    for(i =0; i < arr.length; i++) {
+        sum += arr[i];
+        
+    }
+    return sum/arr.length;
+}
+   console.log(calcAve([2, 3, 7]));
+   console.log(calcAve(total));
+   console.log(calcAve(tips));
+   
+
 
 
 
